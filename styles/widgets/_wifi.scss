@@ -1,0 +1,38 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// WiFi widget styles
+.Wifi {
+    padding: 8px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    
+    icon {
+        font-size: 16px;
+        color: $foreground;
+        transition: color 0.2s ease;
+    }
+    
+    &:hover {
+        background-color: rgba($color: $color1, $alpha: 0.2);
+        
+        icon {
+            color: $color1;
+        }
+    }
+    
+    &.connected {
+        background-color: rgba($color: $color4, $alpha: 0.2);
+        
+        icon {
+            color: $color4;
+        }
+    }
+    
+    &.disconnected {
+        background-color: rgba($color: $color3, $alpha: 0.2);
+        
+        icon {
+            color: $color3;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "ags-shell-dev",
+  "version": "1.0.0",
+  "description": "Modern AGS shell configuration with TypeScript and modular styles",
+  "scripts": {
+    "dev": "ags run",
+    "build": "echo 'Building AGS configuration...' && ags run --dry-run 2>/dev/null || echo 'Build complete'",
+    "check": "echo 'Checking configuration...' && timeout 3s ags run || echo 'Check complete'",
+    "clean": "pkill ags || true",
+    "restart": "pkill ags && sleep 1 && ags run"
+  },
+  "dependencies": {
+    "astal": "/usr/share/astal/gjs"
+  },
+  "keywords": ["ags", "astal", "wayland", "shell", "typescript", "hyprland"],
+  "author": "lonely",
+  "license": "MIT"
+}

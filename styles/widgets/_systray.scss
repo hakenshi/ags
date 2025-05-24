@@ -1,0 +1,25 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// System tray styles
+.SysTray {
+    // Special styling for known applications
+    &.spotify-icon {
+        icon {
+            color: #1ed760;
+        }
+
+        &:hover {
+            background-color: rgba(30, 215, 96, 0.2);
+        }
+    }
+
+    &.discord-icon {
+        icon {
+            color: #5865f2;
+        }
+
+        &:hover {
+            background-color: rgba(88, 101, 242, 0.2);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// Time widget styles
+.Time {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: rgba($color: $foreground, $alpha: 0.1);
+    color: $foreground;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        background-color: rgba($color: $color1, $alpha: 0.2);
+        color: $color1;
+    }
+}
+
+.Date {
+    font-weight: normal;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: rgba($color: $foreground, $alpha: 0.05);
+    color: rgba($color: $foreground, $alpha: 0.8);
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        background-color: rgba($color: $color1, $alpha: 0.15);
+        color: $color1;
+    }
+}

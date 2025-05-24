@@ -1,0 +1,14 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// Bar window styles
+window.Bar {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    
+    > centerbox {
+        background: rgba($color: $background, $alpha: 0.25);
+        border-radius: 100px;
+        margin: 0 8px 8px 8px;
+    }
+}

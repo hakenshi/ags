@@ -1,0 +1,10 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// App launcher widget styles
+.AppLauncher {
+
+    icon {
+        font-size: 22px;
+        color: $color1;
+    }    
+}

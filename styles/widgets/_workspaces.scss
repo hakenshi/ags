@@ -1,0 +1,18 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+// Workspaces widget styles
+.Workspaces {
+    button {
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 100%;
+        color: white;
+        &:hover {
+            background-color: rgba($color: $color1, $alpha: 0.3);
+        }
+
+        &.focused {
+            background-color: $color1;
+        }
+    }
+}

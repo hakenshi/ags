@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.suggest.autoImports": true,
+    "css.validate": false,
+    "scss.validate": false,
+    "files.associations": {
+      "*.scss": "scss"
+    },
+    "emmet.includeLanguages": {
+      "typescript": "html",
+      "typescriptreact": "html"
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/@girs": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.vscode-typescript-next",
+      "syler.sass-indented",
+      "formulahendry.auto-rename-tag"
+    ]
+  }
+}
