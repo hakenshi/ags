@@ -1,48 +1,33 @@
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
-.AudioSlider {
+.AudioSliderBox {
     background-color: rgba($color: $background, $alpha: 0.95);
-    border-radius: 12px;
+    border-radius: 100px;
     padding: 15px;
     min-width: 200px;
-    border: 1px solid rgba($color: $color1, $alpha: 0.3);
+    color: white;
 
-    slider {
-        min-height: 8px;
+    .AudioSlider {
+        // min-height: 8px;
         border-radius: 4px;
 
         trough {
-            background-color: rgba($color: $foreground, $alpha: 0.2);
-            border-radius: 4px;
-            min-height: 8px;
+            background-color: rgba($color: $foreground, $alpha: 0.3); // Fundo cinza
+            border-radius: 100px;
+            min-height: 4px;
         }
 
         fill {
-            background: linear-gradient(90deg, $color1, $color2);
-            border-radius: 4px;
+            background-color: white;
+            border-radius: 100px;
         }
 
         slider {
-            background-color: $color1;
+            background-color: $foreground; // O botãozinho
             border-radius: 50%;
-            min-width: 20px;
-            min-height: 20px;
-            border: 2px solid white;
+            min-width: 16px;
+            min-height: 16px;
+            border: 2px solid $foreground;
         }
-    }
-}
-
-.AudioPopoverOverlay {
-    margin-bottom: 70px;
-    margin-right: 10px;
-}
-
-// Volume button styles
-.VolumeButton {
-    min-width: 40px;
-    min-height: 40px;
-
-    icon {
-        font-size: 18px;
     }
 }

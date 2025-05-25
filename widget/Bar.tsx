@@ -26,7 +26,7 @@ export default function Bar(monitor: Gdk.Monitor) {
   const end = (
     <box className={"modules-right"} hexpand halign={Gtk.Align.END}>
       <SysTray />
-      <VolumeControl />
+      <VolumeControl monitor={monitor} />
       <BatteryLevel />
       <Time />
     </box>
@@ -38,7 +38,7 @@ export default function Bar(monitor: Gdk.Monitor) {
       gdkmonitor={monitor}
       exclusivity={Astal.Exclusivity.EXCLUSIVE}
       anchor={BOTTOM | LEFT | RIGHT}
-      child={<centerbox spacing={SPACING}>{[start, center, end]}</centerbox>}
+      child={<centerbox spacing={16}>{[start, center, end]}</centerbox>}
     />
   );
 }

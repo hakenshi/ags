@@ -1,4 +1,4 @@
-import { Gtk } from "astal/gtk3";
+import { Gdk, Gtk } from "astal/gtk3";
 import AstalWp from "gi://AstalWp";
 import AstalHyprland from "gi://AstalHyprland";
 
@@ -16,6 +16,7 @@ export interface AudioProps extends WidgetProps {
 
 export interface VolumeControlProps extends WidgetProps {
     showPopover?: boolean;
+    monitor: Gdk.Monitor
 }
 
 // Workspace related types
