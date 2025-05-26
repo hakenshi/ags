@@ -2,16 +2,17 @@
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
 // Import base component styles
-@use "./styles/components/base";
-@use "./styles/components/modules";
+@use "./src/styles/components/base";
+@use "./src/styles/components/modules";
 
 // Import widget styles
-@use "./styles/widgets/bar";
-@use "./styles/widgets/audio";
-@use "./styles/widgets/workspaces";
-@use "./styles/widgets/taskbar";
-@use "./styles/widgets/systray";
-@use "./styles/widgets/battery";
-@use "./styles/widgets/time";
-@use "./styles/widgets/app-launcher";
-@use "./styles/widgets/wifi";
+@use "./src/styles/widgets/bar";
+@use "./src/styles/widgets/audio";
+@use "./src/styles/widgets/workspaces";
+@use "./src/styles/widgets/taskbar";
+@use "./src/styles/widgets/systray";
+@use "./src/styles/widgets/battery";
+@use "./src/styles/widgets/time";
+@use "./src/styles/widgets/app-launcher";
+@use "./src/styles/widgets/wifi";
+@use "./src/styles/widgets/osd"

@@ -6,7 +6,6 @@ import { visible } from './state'
 
 export default function AudioWindow() {
 
-
     return (
         <window
             anchor={Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT}

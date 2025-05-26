@@ -1,0 +1,8 @@
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+$widget-background-color: rgba($color: $background, $alpha: 0.95);
+$widget-muted-foreground-color: rgba($color: $foreground, $alpha: 0.3);
+$widget-text-color: white;
+$widget-border-radius: 100px;
+$widget-padding: 15px;
+
