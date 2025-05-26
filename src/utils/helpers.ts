@@ -1,6 +1,6 @@
-import { volumePopOverVisible } from '../src/widget/audio/VolumeControl';
+import { volumePopOverVisible } from '../widget/audio/VolumeControl';
 import { GLib, timeout } from "astal";
-import { CLIENT_ICON_MAP, DEFAULT_TIME_FORMAT } from "../config/constants";
+import { CLIENT_ICON_MAP, DEFAULT_TIME_FORMAT } from "../../config/constants";
 
 /**
  * Get appropriate icon for a client based on its class

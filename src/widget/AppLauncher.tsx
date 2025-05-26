@@ -1,7 +1,7 @@
 import { GLib } from "astal";
 import { Gtk } from "astal/gtk3";
-import type { AppLauncherProps } from "../../types";
-import { spawnAsync } from "../../utils/helpers";
+import type { AppLauncherProps } from "../types";
+import { spawnAsync } from "../utils/helpers";
 
 export default function AppLauncher(props: AppLauncherProps = {}) {
     const { command = "rofi -show drun", icon } = props;

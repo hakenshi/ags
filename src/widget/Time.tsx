@@ -1,6 +1,6 @@
 import { Variable } from "astal";
-import type { TimeProps } from "../../types";
-import { formatTime } from "../../utils/helpers";
+import type { TimeProps } from "../types";
+import { formatTime } from "../utils/helpers";
 import { DEFAULT_TIME_FORMAT } from "../../config/constants";
 
 export default function Time(props: TimeProps = {}) {
