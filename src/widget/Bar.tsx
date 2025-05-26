@@ -1,5 +1,5 @@
 import { Astal, Gdk, Gtk } from "astal/gtk3";
-import { SPACING } from "../config/constants";
+import { SPACING } from "../../config/constants";
 import AppLauncher from "./AppLauncher";
 import VolumeControl from "./audio/VolumeControl";
 import BatteryLevel from "./BatteryLevel";
@@ -38,7 +38,7 @@ export default function Bar(monitor: Gdk.Monitor) {
       gdkmonitor={monitor}
       exclusivity={Astal.Exclusivity.EXCLUSIVE}
       anchor={BOTTOM | LEFT | RIGHT}
-      child={<centerbox spacing={16}>{[start, center, end]}</centerbox>}
+      child={<centerbox>{[start, center, end]}</centerbox>}
     />
   );
 }

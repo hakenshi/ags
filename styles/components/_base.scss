@@ -8,11 +8,9 @@
     border-radius: 0;
     outline: none;
     color: $foreground;
-}
-
-// Base button styles
-button {
-    background: transparent;
+    all: unset;
+    margin: 0;
+    padding: 0;
 }
 
 // Base tooltip styles

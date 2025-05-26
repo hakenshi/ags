@@ -1,6 +1,6 @@
 import { bind } from "astal";
 import Tray from "gi://AstalTray";
-import type { SysTrayProps } from "../types";
+import type { SysTrayProps } from "../../types";
 
 export default function SysTray(props: SysTrayProps = {}) {
   const { spacing = 5 } = props;

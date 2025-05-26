@@ -1,5 +1,5 @@
 import { Astal, Gdk, Gtk } from "astal/gtk3";
-import { SPACING } from "../config/constants";
+import { SPACING } from "../../config/constants";
 
 export default function SimpleBar(monitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor;

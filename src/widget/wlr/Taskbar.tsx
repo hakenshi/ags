@@ -1,7 +1,7 @@
 import { bind } from "astal";
 import Hyprland from "gi://AstalHyprland?version=0.1";
-import type { TaskbarProps } from "../../types";
-import { getClientIcon, shouldShowClient } from "../../utils/helpers";
+import type { TaskbarProps } from "../../../types";
+import { getClientIcon, shouldShowClient } from "../../../utils/helpers";
 
 export default function Taskbar(props: TaskbarProps = {}) {
   const hypr = Hyprland.get_default();

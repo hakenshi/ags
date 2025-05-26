@@ -1,6 +1,6 @@
 import { bind } from "astal";
 import Network from "gi://AstalNetwork";
-import type { WidgetProps } from "../types";
+import type { WidgetProps } from "../../types";
 
 export default function Wifi(props: WidgetProps = {}) {
     const network = Network.get_default();

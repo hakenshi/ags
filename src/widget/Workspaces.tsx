@@ -1,7 +1,7 @@
 import { bind } from "astal";
 import Hyprland from "gi://AstalHyprland";
-import type { WorkspacesProps } from "../types";
-import { getWorkspaceDisplay } from "../utils/helpers";
+import type { WorkspacesProps } from "../../types";
+import { getWorkspaceDisplay } from "../../utils/helpers";
 
 export default function Workspaces(props: WorkspacesProps = {}) {
     const hypr = Hyprland.get_default();

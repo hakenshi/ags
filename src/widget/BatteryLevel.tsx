@@ -1,7 +1,7 @@
 import { bind } from "astal";
 import Battery from "gi://AstalBattery";
-import type { BatteryProps } from "../types";
-import { formatPercentage } from "../utils/helpers";
+import type { BatteryProps } from "../../types";
+import { formatPercentage } from "../../utils/helpers";
 
 export default function BatteryLevel(props: BatteryProps = {}) {
     const { showPercentage = true, lowBatteryThreshold = 0.15 } = props;

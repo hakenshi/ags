@@ -1,4 +1,5 @@
-import { GLib } from "astal";
+import { volumePopOverVisible } from '../src/widget/audio/VolumeControl';
+import { GLib, timeout } from "astal";
 import { CLIENT_ICON_MAP, DEFAULT_TIME_FORMAT } from "../config/constants";
 
 /**
@@ -6,21 +7,21 @@ import { CLIENT_ICON_MAP, DEFAULT_TIME_FORMAT } from "../config/constants";
  */
 export function getClientIcon(client: any): string {
     if (!client?.class) return "application-x-executable";
-    
+
     const clientClass = client.class.toLowerCase();
-    
+
     // Check for exact matches first
     if (CLIENT_ICON_MAP[clientClass]) {
         return CLIENT_ICON_MAP[clientClass];
     }
-    
+
     // Check for partial matches
     for (const [key, icon] of Object.entries(CLIENT_ICON_MAP)) {
         if (clientClass.includes(key)) {
             return icon;
         }
     }
-    
+
     return "application-x-executable";
 }
 
@@ -64,11 +65,11 @@ export function formatPercentage(value: number, decimals: number = 0): string {
  */
 export function shouldShowClient(client: any): boolean {
     if (!client) return false;
-    
+
     // Filter out special workspaces and invalid clients
     if (client.workspace?.id < 0) return false;
     if (client.class === "") return false;
-    
+
     return true;
 }
 
@@ -88,7 +89,7 @@ export function getWorkspaceDisplay(workspace: any): string {
         9: "9",
         10: "10"
     };
-    
+
     return icons[workspace.id] || workspace.id.toString();
 }
 
@@ -119,12 +120,12 @@ export function debounce<T extends (...args: any[]) => any>(
     wait: number
 ): (...args: Parameters<T>) => void {
     let timeout: ReturnType<typeof setTimeout> | null = null;
-    
+
     return (...args: Parameters<T>) => {
         if (timeout !== null) {
             clearTimeout(timeout);
         }
-        
+
         timeout = setTimeout(() => {
             func(...args);
             timeout = null;
@@ -137,13 +138,13 @@ export function debounce<T extends (...args: any[]) => any>(
  */
 export function formatBytes(bytes: number, decimals: number = 2): string {
     if (bytes === 0) return "0 B";
-    
+
     const k = 1024;
     const dm = decimals < 0 ? 0 : decimals;
     const sizes = ["B", "KB", "MB", "GB", "TB"];
-    
+
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    
+
     return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + " " + sizes[i];
 }
 
@@ -173,14 +174,14 @@ export function capitalize(str: string): string {
 export function getContrastColor(hexColor: string): string {
     // Remove # if present
     const color = hexColor.replace("#", "");
-    
+
     // Parse RGB values
     const r = parseInt(color.substr(0, 2), 16);
     const g = parseInt(color.substr(2, 2), 16);
     const b = parseInt(color.substr(4, 2), 16);
-    
+
     // Calculate luminance
     const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    
+
     return luminance > 0.5 ? "#000000" : "#ffffff";
 }
