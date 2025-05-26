@@ -1,9 +1,9 @@
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+@use "../global/variables" as *;
 
 // Time widget styles
 .Time {
     font-weight: bold;
-    font-size: 16px;
-    // padding: 5px 15px;
-    margin-right: 10px;
+    font-size: $font-size-md;
+    margin-right: $margin-lg;
 }

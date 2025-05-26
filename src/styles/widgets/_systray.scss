@@ -1,3 +1,4 @@
+@use "../global/variables" as *;
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
 // System tray styles
@@ -5,21 +6,21 @@
     // Special styling for known applications
     &.spotify-icon {
         icon {
-            color: #1ed760;
+            color: $spotify-color;
         }
 
         &:hover {
-            background-color: rgba(30, 215, 96, 0.2);
+            background-color: rgba(30, 215, 96, $opacity-light);
         }
     }
 
     &.discord-icon {
         icon {
-            color: #5865f2;
+            color: $discord-color;
         }
 
         &:hover {
-            background-color: rgba(88, 101, 242, 0.2);
+            background-color: rgba(88, 101, 242, $opacity-light);
         }
     }
 }

@@ -1,8 +1,66 @@
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
+// === CORE WIDGET VARIABLES ===
 $widget-background-color: rgba($color: $background, $alpha: 0.75);
 $widget-muted-foreground-color: rgba($color: $foreground, $alpha: 0.3);
 $widget-text-color: white;
 $widget-border-radius: 100px;
 $widget-padding: 15px;
+
+// === BAR SPECIFIC ===
+$bar-background-color: rgba($color: $background, $alpha: 0.25);
+
+// === SPACING VALUES ===
+$spacing-xs: 2px;
+$spacing-sm: 5px;
+$spacing-md: 8px;
+$spacing-lg: 10px;
+$spacing-xl: 15px;
+
+// === MARGIN VALUES ===
+$margin-xs: 2px;
+$margin-sm: 5px;
+$margin-md: 8px;
+$margin-lg: 10px;
+$margin-xl: 15px;
+
+// === PADDING VALUES ===
+$padding-xs: 5px;
+$padding-sm: 8px;
+$padding-md: 10px;
+$padding-lg: 15px;
+
+// === BORDER RADIUS VALUES ===
+$border-radius-sm: 10px;
+$border-radius-md: 50px;
+$border-radius-lg: 100px;
+
+// === FONT SIZES ===
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 22px;
+
+// === DIMENSIONS ===
+$dimension-xs: 4px;
+$dimension-sm: 16px;
+$dimension-md: 30px;
+$dimension-lg: 120px;
+$dimension-xl: 200px;
+
+// === OPACITY VALUES ===
+$opacity-light: 0.2;
+$opacity-medium: 0.25;
+$opacity-heavy: 0.3;
+
+// === TRANSITION VALUES ===
+$transition-fast: 0.2s;
+$transition-medium: all 0.2s ease-in-out;
+$transition-color: color 0.2s ease;
+
+// === SPECIAL APP COLORS ===
+$spotify-color: #1ed760;
+$discord-color: #5865f2;
+
+// === BORDER VALUES ===
+$border-width: 2px;
 

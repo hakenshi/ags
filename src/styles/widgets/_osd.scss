@@ -2,24 +2,27 @@
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
 .OsdLevelBox {
-    padding: 10px 15px;
-    min-height: 30px;
-    min-width: 200px;
+    padding: $padding-md $padding-lg;
+    min-height: $dimension-md;
+    min-width: $dimension-xl;
     background-color: $widget-background-color;
     color: $widget-text-color;
     border-radius: $widget-border-radius;
-    margin-bottom: 35px;
+    margin-bottom: $margin-xl * 2 + $spacing-sm; // 35px
+    
     .OsdLevelBar {
-        margin: 0 15px;
+        margin: 0 $margin-xl;
+        
         trough {
             background-color: $widget-muted-foreground-color;
-            border-radius: 100px;
-            min-height: 4px;
-            min-width: 120px;
+            border-radius: $border-radius-lg;
+            min-height: $dimension-xs;
+            min-width: $dimension-lg;
         }
 
         block {
-            border-radius: 100px;
+            border-radius: $border-radius-lg;
+            
             &.filled {
                 background: $color1;
             }

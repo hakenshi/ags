@@ -1,10 +1,12 @@
+@use "../global/variables" as *;
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
 // App launcher widget styles
 .AppLauncher {
-    margin-left: 10px;
+    margin-left: $margin-lg;
+    
     icon {
-        font-size: 22px;
+        font-size: $font-size-lg;
         color: $color1;
     }    
 }

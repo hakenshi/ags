@@ -1,8 +1,9 @@
+@use "../global/variables" as *;
 @use "/home/lonely/.cache/wal/colors-ags.scss" as *;
 
 // Taskbar widget styles
 .Taskbar {
     button{
-        margin: 0 2px;
+        margin: 0 $margin-xs;
     }
 }

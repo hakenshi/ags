@@ -5,30 +5,30 @@
     background-color: $widget-background-color;
     border-radius: $widget-border-radius;
     padding: $widget-padding;
-    min-height: 200px;
-    min-width: 30px;
+    min-height: $dimension-xl;
+    min-width: $dimension-md;
     color: $widget-text-color;
     
     .AudioSlider {
-        margin: 15px 0;
+        margin: $margin-xl 0;
         
         trough {
             background-color: $widget-muted-foreground-color;
             border-radius: $widget-border-radius;
-            min-height: 4px;
+            min-height: $dimension-xs;
         }
 
         highlight {
             background: $color1;
-            border-radius: 100px;
+            border-radius: $border-radius-lg;
         }
 
         slider {
             background-color: $foreground;
-            border-radius: 50%;
-            min-width: 16px;
-            min-height: 16px;
-            border: 2px solid $foreground;
+            border-radius: $border-radius-md;
+            min-width: $dimension-sm;
+            min-height: $dimension-sm;
+            border: $border-width solid $foreground;
         }
     }
 }
