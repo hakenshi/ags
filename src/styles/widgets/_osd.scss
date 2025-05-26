@@ -7,13 +7,12 @@
     min-width: 200px;
     background-color: $widget-background-color;
     color: $widget-text-color;
-    border-radius: 100px;
+    border-radius: $widget-border-radius;
     margin-bottom: 35px;
     .OsdLevelBar {
         margin: 0 15px;
-
         trough {
-            background-color: rgba($color: $foreground, $alpha: 0.3);
+            background-color: $widget-muted-foreground-color;
             border-radius: 100px;
             min-height: 4px;
             min-width: 120px;
