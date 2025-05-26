@@ -2,8 +2,19 @@
 @use "../global/variables" as *;
 
 // Time widget styles
+
+.DateTimeBox{
+    margin: $margin-sm 0;
+    padding: $padding-lg;
+}
+
 .Time {
     font-weight: bold;
     font-size: $font-size-md;
+    margin-right: $margin-lg;
+}
+
+.Date {
+    font-size: $font-size-xs;
     margin-right: $margin-lg;
 }
