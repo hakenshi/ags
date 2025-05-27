@@ -1,25 +1,30 @@
-import { bind, Binding, Variable } from "astal"
-import { Astal, Gtk } from "astal/gtk3"
-import { WindowProps } from "astal/gtk3/widget"
+import { GObject, Variable } from "astal";
+import { astalify, Gtk, Widget } from "astal/gtk3";
 
-interface PopupWindowProps extends WindowProps {
+interface PopupWindowProps extends Widget.WindowProps {
     variable: Variable<boolean>
-    children?: JSX.Element[] | Binding<JSX.Element[]>
+    children?: JSX.Element
 }
 
-export default function PopupWindow({ children, variable, ...rest }: PopupWindowProps) {
-    return (
-        <window
-            {...rest}
-        >
-            <eventbox onClick={() => variable.set(false)}>
-                <revealer
-                    revealChild={bind(variable)}
-                    transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
-                >
-                    {children}
-                </revealer>
-            </eventbox>
-        </window>
-    )
+class PopupWindow extends astalify(Gtk.Window) {
+    static { GObject.registerClass(this) }
+
+    constructor(props: PopupWindowProps) {
+        super(props as any)
+        
+        this.set_visible(props.variable.get())
+
+        props.variable.subscribe(visible => {
+            this.set_visible(visible)
+        })
+        // this.child = (
+        //     <eventbox
+        //         onButtonPressEvent={() => props.variable.set(false)}
+        //     >
+        //         {props.children}
+        //     </eventbox>
+        // )
+    }
 }
+
+export default PopupWindow

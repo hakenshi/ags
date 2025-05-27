@@ -5,8 +5,6 @@ import Bar from "./src/widget/Bar"
 import AudioWindow from "./src/widget/audio/AudioWindow"
 import OSD from "./src/widget/osd/OSD"
 
-const hyprland = AstalHyprland.get_default()
-
 App.start({
     main() {
         App.apply_css(style);

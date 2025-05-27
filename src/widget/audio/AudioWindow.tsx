@@ -12,7 +12,7 @@ export default function AudioWindow() {
             exclusivity={Astal.Exclusivity.IGNORE}
             keymode={Astal.Keymode.ON_DEMAND}
             marginBottom={80}
-            marginRight={120}
+            marginRight={180}
             application={App}
             visible={bind(visible)}
             onButtonPressEvent={(self, event) => {

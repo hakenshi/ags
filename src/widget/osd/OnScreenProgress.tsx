@@ -7,13 +7,15 @@ export default function OnScreenProgress({ visible }: { visible: Variable<boolea
     const speaker = AstalWp01.get_default()?.audio.defaultSpeaker!
     const iconName = Variable("")
     const volumeValue = Variable(0)
+    const initialized = Variable(false)
+
 
     let count = 0
 
     const show = (v: number, icon: string) => {
-        visible.set(true)
         volumeValue.set(v)
         iconName.set(icon)
+        visible.set(true)
 
         count++
 
@@ -31,11 +33,16 @@ export default function OnScreenProgress({ visible }: { visible: Variable<boolea
             setup={self => {
                 if (speaker) {
                     self.hook(speaker, 'notify::volume', () => {
+                        if (!initialized.get()) {
+                            initialized.set(true)
+                            return
+                        }
                         show(speaker.volume, speaker.volumeIcon)
+
                     })
                 }
             }}
-            revealChild={visible()}
+            revealChild={bind(visible)}
             transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
         >
             <box
@@ -48,7 +55,7 @@ export default function OnScreenProgress({ visible }: { visible: Variable<boolea
 
                 <levelbar
                     valign={Gtk.Align.CENTER}
-                    value={volumeValue()}
+                    value={bind(volumeValue)}
                     className={"OsdLevelBar"}
                 />
 
