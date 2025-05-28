@@ -1,30 +1,8 @@
-import { GObject, Variable } from "astal";
-import { astalify, Gtk, Widget } from "astal/gtk3";
+import { App, Widget } from "astal/gtk3";
+import { Astal } from "astal/gtk4";
 
-interface PopupWindowProps extends Widget.WindowProps {
-    variable: Variable<boolean>
-    children?: JSX.Element
-}
-
-class PopupWindow extends astalify(Gtk.Window) {
-    static { GObject.registerClass(this) }
-
-    constructor(props: PopupWindowProps) {
-        super(props as any)
+export default ({gdkmonitor, namespace, application = App, keymode, anchor = Astal.WindowAnchor.BOTTOM, child, ...props}: Widget.WindowProps) => {
+    return (
         
-        this.set_visible(props.variable.get())
-
-        props.variable.subscribe(visible => {
-            this.set_visible(visible)
-        })
-        // this.child = (
-        //     <eventbox
-        //         onButtonPressEvent={() => props.variable.set(false)}
-        //     >
-        //         {props.children}
-        //     </eventbox>
-        // )
-    }
+    )
 }
-
-export default PopupWindow

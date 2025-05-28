@@ -11,7 +11,7 @@ export function getSignalIcon(strength: number) {
   return "network-wireless-signal-none-symbolic";
 }
 
-export async function handleConnection(accessPoint: Network.Network) {
+export async function handleConnection(accessPoint: Network.AccessPoint) {
   try {
     // await accessPoint.connect()
     wifiVisible.set(false);
