@@ -1,19 +1,19 @@
 import { Astal, Gdk, Gtk } from "astal/gtk3";
-import { SPACING } from "../../config/constants";
-import AppLauncher from "./AppLauncher";
-import VolumeControl from "./audio/VolumeControl";
-import BatteryLevel from "./BatteryLevel";
-import SysTray from "./SysTray";
-import Time from "./Time";
-import Taskbar from "./wlr/Taskbar";
-import Workspaces from "./Workspaces";
+import { SPACING } from "../config/constants";
+import VolumeControl from "./widget/audio/VolumeControl";
+import BatteryLevel from "./widget/BatteryLevel";
+import SysTray from "./widget/SysTray";
+import Time from "./widget/Time";
+import Taskbar from "./widget/wlr/Taskbar";
+import Workspaces from "./widget/Workspaces";
+import Wifi from "./widget/wifi/Wifi";
 
 export default function Bar(monitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor;
 
   const start = (
     <box className={"modules-left"} hexpand halign={Gtk.Align.START}>
-      {[<AppLauncher />, <Taskbar />]}
+      {[<Taskbar />]}
     </box>
   );
 
@@ -25,7 +25,8 @@ export default function Bar(monitor: Gdk.Monitor) {
 
   const end = (
     <box className={"modules-right"} hexpand halign={Gtk.Align.END}>
-      <SysTray />
+      {/* <SysTray /> */}
+      <Wifi />
       <VolumeControl monitor={monitor} />
       <BatteryLevel />
       <Time />

@@ -3,11 +3,12 @@ import { Astal, App, Gdk } from 'astal/gtk3'
 import AudioPopover from './AudioPopover'
 import VolumeControl from './VolumeControl'
 import { visible } from './state'
+import PopupWindow from '../../components/PopupWindow'
 
 export default function AudioWindow() {
 
     return (
-        <window
+        <PopupWindow
             anchor={Astal.WindowAnchor.BOTTOM | Astal.WindowAnchor.RIGHT}
             exclusivity={Astal.Exclusivity.IGNORE}
             keymode={Astal.Keymode.ON_DEMAND}
@@ -25,11 +26,7 @@ export default function AudioWindow() {
             }}
             className={"AudioPopover"}
         >
-            <eventbox
-                onClick={() => visible.set(false)}
-            >
-                <AudioPopover />
-            </eventbox>
-        </window>
+            <AudioPopover />
+        </PopupWindow>
     )
 }

@@ -1,0 +1,52 @@
+@use "sass:string";
+@use "/home/lonely/.cache/wal/colors-ags.scss" as *;
+
+window#launcher {
+    all: unset;
+
+    box.Applauncher {
+        background-color: $background;
+        border-radius: 11px;
+        margin: 1rem;
+        padding: .8rem;
+        box-shadow: 2px 3px 8px 0 rgba(black, .4);
+
+        entry {
+            margin-bottom: .8rem;
+        }
+
+        button {
+            min-width: 0;
+            min-height: 0;
+            padding: .5rem;
+
+            icon {
+                font-size: 3em;
+                margin-right: .3rem;
+            }
+
+            label.name {
+                font-weight: bold;
+                font-size: 1.1em
+            }
+
+            label.description {
+                color: rgba($foreground, .8);
+            }
+        }
+
+        box.not-found {
+            padding: 1rem;
+
+            icon {
+                font-size: 6em;
+                color: rgba($foreground, .7);
+            }
+
+            label {
+                color: rgba($foreground, .9);
+                font-size: 1.2em;
+            }
+        }
+    }
+}

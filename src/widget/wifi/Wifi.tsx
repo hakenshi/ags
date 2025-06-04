@@ -1,6 +1,7 @@
 import { bind } from "astal";
 import Network from "gi://AstalNetwork";
 import type { WidgetProps } from "../../types";
+import { wifiVisible } from "./helpers";
 
 export default function Wifi(props: WidgetProps = {}) {
     const network = Network.get_default();
@@ -20,6 +21,7 @@ export default function Wifi(props: WidgetProps = {}) {
                     ? [
                         <button
                             className={`Wifi ${getWifiClass(wifi)}`}
+                            onClick={() => wifiVisible.set(!wifiVisible.get())}
                             tooltipText={bind(wifi, "ssid").as(ssid => 
                                 ssid ? `Connected to: ${ssid}` : "WiFi Available"
                             )}

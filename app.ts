@@ -1,9 +1,10 @@
 import { App } from "astal/gtk3"
 import AstalHyprland from "gi://AstalHyprland?version=0.1"
 import style from "./style.scss"
-import Bar from "./src/widget/Bar"
+import Bar from "./src/Bar"
 import AudioWindow from "./src/widget/audio/AudioWindow"
 import OSD from "./src/widget/osd/OSD"
+import WifiMenu from "./src/widget/wifi/WifiMenu"
 
 App.start({
     main() {
@@ -12,6 +13,7 @@ App.start({
         App.get_monitors().map(monitor => {
             Bar(monitor)
             OSD(monitor)
+            WifiMenu(monitor)
         });
 
         AudioWindow()
