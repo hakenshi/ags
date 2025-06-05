@@ -5,13 +5,13 @@
 .Battery {
     icon {
         font-size: $font-size-md;
-        color: $foreground;
+        color: white;
     }
 
     label {
         font-weight: bold;
         font-size: $font-size-sm;
-        color: $foreground;
+        color: white;
     }
 
     &:hover {
