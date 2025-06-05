@@ -7,6 +7,7 @@ import Time from "./widget/Time";
 import Taskbar from "./widget/wlr/Taskbar";
 import Workspaces from "./widget/Workspaces";
 import Wifi from "./widget/wifi/Wifi";
+import SettingsToggler from "./widget/settings";
 
 export default function Bar(monitor: Gdk.Monitor) {
   const { BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor;
@@ -26,9 +27,7 @@ export default function Bar(monitor: Gdk.Monitor) {
   const end = (
     <box className={"modules-right"} hexpand halign={Gtk.Align.END}>
       {/* <SysTray /> */}
-      <Wifi />
-      <VolumeControl monitor={monitor} />
-      <BatteryLevel />
+      <SettingsToggler />
       <Time />
     </box>
   );

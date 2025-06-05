@@ -6,10 +6,11 @@ import { settingsVisible } from "./helper";
 
 export default function SettingsToggler() {
     return (
-        <box>
-            <Wifi />
-            <VolumeControl />
-            <BatteryLevel />
-        </box>
+        <eventbox onButtonPressEvent={() => settingsVisible.set(!settingsVisible.get())}
+            child={<box spacing={8}>
+                <Wifi />
+                <VolumeControl />
+                <BatteryLevel />
+            </box>} />
     )
 }

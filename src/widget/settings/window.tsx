@@ -10,8 +10,7 @@ export default function SettingsWindow(monitor: Gdk.Monitor) {
             className={"SettingsWindow"}
             child={
                 <box className={"SettingsContent"} vertical spacing={16}>
-                    <label label={"Settings Window"} />
-                    <label label={"banana"} />
+                    <button label={""} />
                 </box>
             }
         />
