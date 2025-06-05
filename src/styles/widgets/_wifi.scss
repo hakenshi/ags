@@ -13,27 +13,27 @@
         transition: $transition-color;
     }
     
-    &:hover {
-        background-color: rgba($color: $color1, $alpha: $opacity-light);
+    // &:hover {
+    //     background-color: rgba($color: $color1, $alpha: $opacity-light);
         
-        icon {
-            color: $color1;
-        }
-    }
+    //     icon {
+    //         color: $color1;
+    //     }
+    // }
     
-    &.connected {
-        background-color: rgba($color: $color4, $alpha: $opacity-light);
+    // &.connected {
+    //     background-color: rgba($color: $color4, $alpha: $opacity-light);
         
-        icon {
-            color: $color4;
-        }
-    }
+    //     icon {
+    //         color: $color4;
+    //     }
+    // }
     
-    &.disconnected {
-        background-color: rgba($color: $color3, $alpha: $opacity-light);
+    // &.disconnected {
+    //     background-color: rgba($color: $color3, $alpha: $opacity-light);
         
-        icon {
-            color: $color3;
-        }
-    }
+    //     icon {
+    //         color: $color3;
+    //     }
+    // }
 }

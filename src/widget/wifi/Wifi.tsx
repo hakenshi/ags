@@ -15,22 +15,16 @@ export default function Wifi(props: WidgetProps = {}) {
     };
 
     return (
-        <box visible={wifi.as(Boolean)}>
-            {wifi.as(wifi =>
-                wifi
-                    ? [
-                        <button
-                            className={`Wifi ${getWifiClass(wifi)}`}
-                            onClick={() => wifiVisible.set(!wifiVisible.get())}
-                            tooltipText={bind(wifi, "ssid").as(ssid => 
-                                ssid ? `Connected to: ${ssid}` : "WiFi Available"
-                            )}
-                        >
-                            <icon icon={bind(wifi, "iconName")} />
-                        </button>
-                    ]
-                    : []
-            )}
+        <box visible={wifi.as(Boolean)} child={
+            wifi.as(wifi =>
+                wifi ?
+                    <icon icon={bind(wifi, "iconName")} className={`Wifi ${getWifiClass(wifi)}`}
+                        tooltipText={bind(wifi, "ssid").as(ssid =>
+                            ssid ? `Connected to: ${ssid}` : "WiFi Available"
+                        )} />
+                    : <icon icon="network-wireless-offline-symbolic" className="Wifi disabled" tooltipText="WiFi indisponível" />
+            )
+        }>
         </box>
     );
 }

@@ -5,6 +5,7 @@ import Bar from "./src/Bar"
 import AudioWindow from "./src/widget/audio/AudioWindow"
 import OSD from "./src/widget/osd/OSD"
 import WifiMenu from "./src/widget/wifi/WifiMenu"
+import SettingsWindow from "./src/widget/settings/window"
 
 App.start({
     main() {
@@ -13,9 +14,8 @@ App.start({
         App.get_monitors().map(monitor => {
             Bar(monitor)
             OSD(monitor)
-            WifiMenu(monitor)
+            SettingsWindow(monitor)
         });
-
         AudioWindow()
     },
 })

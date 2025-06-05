@@ -1,12 +1,15 @@
 import { Gdk } from "astal/gtk3";
-import PopupWindow from "../../components/PopupWindow";
+import VolumeControl from "../audio/VolumeControl";
+import BatteryLevel from "../BatteryLevel";
+import Wifi from "../wifi/Wifi";
+import { settingsVisible } from "./helper";
 
-export default function SettingsWindow(monitor: Gdk.Monitor) {
-  return (
-    <PopupWindow
-        
-    >
-
-    </PopupWindow>
-)
+export default function SettingsToggler() {
+    return (
+        <box>
+            <Wifi />
+            <VolumeControl />
+            <BatteryLevel />
+        </box>
+    )
 }

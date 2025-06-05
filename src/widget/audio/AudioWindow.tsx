@@ -25,8 +25,7 @@ export default function AudioWindow() {
                 }
             }}
             className={"AudioPopover"}
-        >
-            <AudioPopover />
-        </PopupWindow>
+            child={<AudioPopover />}
+        />
     )
 }
